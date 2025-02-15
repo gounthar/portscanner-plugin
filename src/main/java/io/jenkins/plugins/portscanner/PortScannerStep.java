@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.kohsuke.stapler.DataBoundConstructor;
-import org.kohsuke.stapler.StaplerRequest;
+import org.kohsuke.stapler.StaplerRequest2;
 
 import com.google.gson.ExclusionStrategy;
 import com.google.gson.FieldAttributes;
@@ -214,7 +214,7 @@ public class PortScannerStep extends Builder implements SimpleBuildStep
     }
 
     @Override
-    public boolean configure(StaplerRequest req, JSONObject json) throws FormException
+    public boolean configure(StaplerRequest2 req, JSONObject json) throws FormException
     {
       req.bindJSON(this, json);
       save();
